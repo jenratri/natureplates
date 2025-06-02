@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nature's Plate</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #f5fdf5;
+        color: #333;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10%;
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      nav h1 {
+        font-size: 24px;
+        color: #2b7a2b;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+      }
+
+      nav ul li a.sign-in {
+        padding: 8px 16px;
+        background-color: #2b7a2b;
+        color: white;
+        border-radius: 5px;
+      }
+
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 80px 10%;
+        background-color: #dbead7;
+      }
+
+      .hero-text {
+        max-width: 50%;
+      }
+
+      .hero-text h2 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+
+      .hero-text h3 {
+        font-size: 1.5em;
+        color: #2b7a2b;
+      }
+
+      .hero-text p {
+        margin-top: 20px;
+        font-size: 1em;
+      }
+
+      .hero-text .buttons {
+        margin-top: 30px;
+      }
+
+      .hero-img {
+        max-width: 40%;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 10px 25px;
+        margin: 5px;
+        background-color: #2b7a2b;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+
+      .btn.secondary {
+        background-color: #dbead7;
+        color: #333;
+      }
+
+      .section {
+        padding: 60px 10%;
+        text-align: center;
+      }
+
+      .section.white-bg {
+        background-color: #ffffff;
+      }
+
+      .section-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+
+      .features-content {
+        flex: 1;
+        min-width: 300px;
+        text-align: left;
+      }
+
+      .features-img {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .features-img img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 10px;
+      }
+
+      .features-content h2 {
+        margin-bottom: 20px;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .card {
+        background-color: #dbead7;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .card img {
+        width: 100%;
+        height: auto;
+        max-height: 150px; /* atau sesuaikan sesuai kebutuhan */
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .testimoni-section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 40px;
+        max-width: 1000px;
+        margin: 60px auto;
+        padding: 0 20px;
+      }
+
+      .testimoni-image img {
+        width: 300px;
+        height: auto;
+        border-radius: 20px;
+        object-fit: cover;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .testimoni-list {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .testimoni-card {
+        display: flex;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        padding: 16px;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .testimoni-content h4 {
+        margin: 0;
+        font-size: 16px;
+        color: #1d3557;
+      }
+
+      .testimoni-content blockquote {
+        margin: 8px 0 0;
+        font-style: italic;
+        color: #555;
+      }
+
+      .join-member {
+        position: relative;
+        width: 75%;
+        margin: 60px auto;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .join-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(salad.jpg) center/cover no-repeat;
+        filter: blur(5px);
+        z-index: 1;
+        transform: scale(1.1);
+      }
+
+      .join-content {
+        position: relative;
+        z-index: 2;
+        color: white;
+      }
+
+      footer {
+        background-color: #003f3f;
+        color: white;
+        padding: 40px 10%;
+        justify-content: space-between;
+        display: flex;
+        text-align: center;
+      }
+
+      .footer-left {
+        flex: 1;
+        text-align: left;
+      }
+
+      .footer-right {
+        flex: 1;
+        text-align: right;
+      }
+
+      footer a.btn {
+        margin-top: 20px;
+        display: inline-block;
+        background-color: #fcd34d;
+        color: #333;
+      }
+
+      .stars {
+        color: #facc15; /* warna kuning */
+        margin: 4px 0;
+        font-size: 16px;
+      }
+
+      .icon-small {
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        margin-right: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <img src="logo.png" alt="foto logo" width="60" />
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#" class="sign-in">Sign In</a></li>
+      </ul>
+    </nav>
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Gak Doyan Sayur?</h2>
+        <h3>Cobain Salad Nature’s Plate</h3>
+        <p>
+          Mau tampil fresh, bertenaga, dan makin percaya diri? Semua berawal
+          dari apa yang kamu makan
+        </p>
+        <div class="buttons">
+          <a href="#" class="btn">Pesan Sekarang</a>
+          <a href="#" class="btn secondary">Menu Lainnya</a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img
+          src="salad.png"
+          alt="salad"
+          style="width: 80%; border-radius: 10px"
+        />
+      </div>
+    </section>
+
+    <section class="section section-flex">
+      <div class="features-img">
+        <img
+          src="salad2.png"
+          alt="features"
+          style="width: 80%; border-radius: 10px"
+        />
+      </div>
+      <div class="features-content">
+        <h2>Kenapa Harus Salad Kami?</h2>
+        <div class="features-grid">
+          <div>
+            <h4>Dressing Homemade</h4>
+            <p>Rasa creamy tanpa bahan pengawet</p>
+          </div>
+          <div>
+            <h4>Tanpa rasa hambar</h4>
+            <p>Makan sehat tetap nikmat!</p>
+          </div>
+          <div>
+            <h4>Bahan Segar</h4>
+            <p>Buah & sayur pilihan langsung dari petani lokal</p>
+          </div>
+          <div>
+            <h4>Kombinasi Lezat</h4>
+            <p>Perpaduan rasa yang bikin ketagihan</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white-bg">
+      <h2>Menu Populer Kami</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <img src="images.jpg" alt="p" />
+          <h4>Chicken Salad</h4>
+          <p>Salad dengan potongan ayam</p>
+          <p>Rp 25.000</p>
+        </div>
+        <div class="card">
+          <img src="salad telur.jpg" alt="p" />
+          <h4>Egg Salad</h4>
+          <p>Salad dengan telur rebus</p>
+          <p>Rp 30.000</p>
+        </div>
+        <div class="card">
+          <img src="salad buah.jpg" alt="p" />
+          <h4>Fruit Salad</h4>
+          <p>Salad dengan buah-buahan segar</p>
+          <p>Rp 18.000</p>
+        </div>
+        <div class="card">
+          <img src="salad hijau.jpg" alt="p" />
+          <h4>Green Salad</h4>
+          <p>Salad dengan selada, bayam, kubis</p>
+          <p>Rp 20.000</p>
+        </div>
+      </div>
+      <div style="margin-top: 20px">
+        <a href="#" class="btn secondary">Menu Lainnya</a>
+      </div>
+    </section>
+
+    <div class="testimoni-section">
+      <div class="testimoni-image">
+        <img src="salad.jpg" alt="Foto Salad" />
+      </div>
+      <div class="testimoni-list">
+        <div class="testimoni-card">
+          <img src="p1.jpg" alt="Foto Naura" class="avatar" />
+          <div class="testimoni-content">
+            <h4>Naura Ayu</h4>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote>"Saladnya fresh dan enak bangett!!"</blockquote>
+          </div>
+        </div>
+        <div class="testimoni-card">
+          <img src="p2.jpg" alt="Foto Marsya" class="avatar" />
+          <div class="testimoni-content">
+            <h4>Marsya Imoet</h4>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote>"Menu saladnya beragam"</blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="section white-bg">
+      <div class="join-member">
+        <div class="join-bg"></div>
+        <div class="join-content">
+          <h3>Join our member and get discount up to 50%</h3>
+          <a href="#" class="btn">Daftar Sekarang</a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-left">
+        <p><strong>Nature’s Plate</strong><br />Condong Catur, Depok</p>
+        <img src="https://img.icons8.com/fluency/48/instagram-new.png" />
+        <img src="https://img.icons8.com/ios_filled/48/twitterx--v2.png" />
+      </div>
+      <div class="footer-right">
+        <p>
+          <strong>Contact:</strong><br />
+          <span class="inline-block">
+            <img
+              src="https://img.icons8.com/fluency-systems-filled/24/phone.png"
+              class="icon-small"
+            />+62 8123456789</span
+          ><br />
+          <span class="inline-block">
+            <img
+              src="https://img.icons8.com/color/24/gmail.png"
+              class="icon-small"
+            />naturesplate@gmail.com</span
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

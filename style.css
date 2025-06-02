@@ -1,0 +1,88 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #eaf7ea;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.hero {
+    padding: 40px 20px;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+}
+
+.hero h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btn.secondary {
+    background: #ccc;
+    color: #000;
+}
+
+.features, .menu, .testimoni {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.feature-grid, .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+blockquote {
+    margin: 20px auto;
+    max-width: 600px;
+    font-style: italic;
+}
+
+footer {
+    background: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

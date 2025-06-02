@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Nature's Plate</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #fefefe;
+        
+        color: #333;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10%;
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      nav h1 {
+        font-size: 24px;
+        color: #2b7a2b;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+      }
+
+      nav ul li a.sign-in {
+        padding: 8px 16px;
+        background-color: #2b7a2b;
+        color: white;
+        border-radius: 5px;
+      }
+
+      .title {
+        text-align: center;
+        margin-bottom: 40px;
+        color: #d62828;
+      }
+
+      .menu-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 0 20px;
+      }
+
+      .menu-card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.2s ease;
+      }
+
+      .menu-card:hover {
+        transform: scale(1.03);
+      }
+
+      .menu-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .menu-card h2 {
+        margin: 16px;
+        color: #1d3557;
+      }
+
+      .menu-card p {
+        margin: 0 16px 12px;
+        font-size: 14px;
+        color: #555;
+      }
+
+      .price {
+        display: block;
+        margin: 0 16px 16px;
+        font-weight: bold;
+        color: #e76f51;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="contaner-fluid mb-4">
+      <img src="logo.jpg" alt="foto logo" />
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#" class="sign-in">Sign In</a></li>
+      </ul>
+    </nav>
+    <h1 class="title">Menu Nature's Plate</h1>
+    <div class="menu-container">
+      <div class="menu-card">
+        <img src="https://via.placeholder.com/300x200" alt="" />
+        <h2>Egg salad</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eum
+          deleniti maiores illo incidunt tempora facere vel blanditiis repellat,
+          eius ad reiciendis quo aut labore esse odio nemo cum delectus!
+        </p>
+        <span class="price">Rp 12.000</span>
+      </div>
+      <div class="menu-card">
+        <img src="https://via.placeholder.com/300x200" alt="" />
+        <h2>Fruit Salad</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cum ullam
+          veniam sapiente laborum numquam corrupti inventore consequuntur
+          doloremque. Expedita pariatur natus dolorem velit deserunt aliquam,
+          corrupti veniam architecto quod.
+        </p>
+        <span class="price">Rp 15.000</span>
+      </div>
+      <div class="menu-card">
+        <img src="https://via.placeholder.com/300x200" alt="" />
+        <h2>Salad</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et adipisci
+          temporibus eveniet vero exercitationem ipsa facilis ipsum quia! Illo
+          debitis eum reiciendis quos quibusdam, voluptate eveniet numquam sint
+          dolorem esse!
+        </p>
+        <span class="price">Rp 18.000</span>
+      </div>
+    </div>
+  </body>
+</html>
